@@ -1,0 +1,14 @@
+.header {
+  background-color: $bg-nav;
+  color: $font-nav;
+  font-family: $font-family;
+  // position: relative;
+
+  &__ground {
+    position: absolute;
+    right: 0;
+    top: 170px;
+    left: auto;
+    max-width: 50%;
+  }
+}

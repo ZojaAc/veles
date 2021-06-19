@@ -1,0 +1,10 @@
+@import "variables"; //пишем переменные
+@import "reset"; //сборс стилей
+// @import "fonts"; //подключаем шрифты (локально)
+@import "mixins.scss";
+//подключаем БЭМ блоки
+// @import "blocks/test";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/slide.scss";
+@import "blocks/ground.scss";
