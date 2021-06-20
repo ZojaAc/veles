@@ -1,9 +1,15 @@
 .slide {
+  @include font(27px, 41px, 700);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  // display: flex;
+  // margin: 0 auto;
+  
   &__article {
     padding-top: 140px;
     max-width: 50%;
   }
-  
+
   &__text {
     max-width: 526px;
     margin-bottom: 50px;
@@ -13,32 +19,25 @@
     @include font(18px, 21px, 700);
     letter-spacing: 0.13em;
     text-transform: uppercase;
-    text-align: center;
-    color: $bg-nav;
-    display: block;
     padding: 19px 53px;
-    background-color: $bg-btn;
-    border: none;
-    cursor: pointer;
     margin-bottom: 70px;
+  }  
+
+  &__ground {
+    position: absolute;
+    right: 0;
+    top: 170px;
+    max-width: 50%;
+    min-height: 100%;
   }
 
-  &__pages {
-    @include font(18px, 21px, 400);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: calc(24px * 2 + 18px * 2 + 47px);
-    margin-bottom: 39px;
-    margin-left: auto;
+  &__container {
+    max-width: 100%;
+    min-height: 100%;
   }
 
-  &__vector {
-    &:last-child {
-      transform: rotate(180deg);
-    }
+  &__gr-img {
+    max-width: 100%;
+    min-height: 100%;
   }
-
-
-  
 }

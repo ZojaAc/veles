@@ -2,13 +2,28 @@
   background-color: $bg-nav;
   color: $font-nav;
   font-family: $font-family;
-  // position: relative;
+  padding-bottom: 40px;
 
-  &__ground {
-    position: absolute;
-    right: 0;
-    top: 170px;
-    left: auto;
-    max-width: 50%;
+  &__slide {
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  &__pages {
+    @include font(18px, 21px, 400);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: calc(24px * 2 + 18px * 2 + 47px);
+    // margin-bottom: 39px;
+    margin-left: 40%;
+  }
+  
+  &__vector {
+    &:last-child {
+      transform: rotate(180deg);
+    }
   }
 }

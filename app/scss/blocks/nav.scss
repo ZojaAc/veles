@@ -1,13 +1,32 @@
 .nav {
-  &__main {
-    max-width: calc(1920px - 355px * 2);
+  &__menu {
+    list-style: none;
+    max-width: 1170px;
     display: flex;
-    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 20px;
+    margin: 0 auto;
+    padding: 0;
   }
 
+  &__item {
+    padding: 0;
+    margin: 0;
+
+    // &:not(:last-child) {
+    //   margin-right: 30px;
+    // } 
+  }
+
+  &__point {
+    display: block;
+    @include font(13px, 15px, 400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }  
+  
   &__logo {
     @include font(12px, 14px, 400);
     text-transform: uppercase;
@@ -17,34 +36,17 @@
     padding: 10px 19px;
   }
 
-  &__menu {
-    @include font(13px, 15px, 400);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-    
-  &__point {
-    display: block;
-  }
-
   &__phone {
-    @include font(13px, 15px, 400);
-    letter-spacing: 0.1em;
+    text-transform: none;
 
-    .nav__img {
+    .nav__phone-img {
       transform: matrix(0.97, 0.26, -0.25, 0.97, 0, 0);
     }
   }
 
   &__adress {
     @include font(10px, 14px, 400);
+    text-transform: none;
   }
 
   &__phone, &__adress {
@@ -52,19 +54,7 @@
     align-items: center;
   }
 
-  &__img {
+  &__phone-img, &__adress-img {
     margin-right: 9px;
-  }
-
-  &__slide {
-    @include font(27px, 32px, 700);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    display: flex;
-    margin: 0 auto;
-    // align-items: center;
-    max-width: calc(1920px - 355px * 2);
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  }  
 }
