@@ -12,34 +12,34 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header-js">
     <div class="header__top">
       <div class="header__logo">VELES</div>
-      <nav class="header__nav nav">
-        <ul class="nav__menu">
+      <nav class="header__nav nav nav-js">
+        <ul class="nav__menu menu-js">
           <!-- <li class="nav__item"><a class="nav__point nav__logo">VELES</a></li> -->
           <li class="nav__item"><a class="nav__point">ЗЕМЛЯ</a></li>
           <li class="nav__item"><a class="nav__point">крановые площадки</a></li>
           <li class="nav__item"><a class="nav__point">выгрузка вагонов</a></li>
           <li class="nav__item"><a class="nav__point">фасовка</a></li>
           <li class="nav__item"><a class="nav__point">щебень</a></li>
-          <li class="nav__item"><a class="nav__point nav__phone">
+          <li class="nav__item nav__item-desk"><a class="nav__point nav__phone">
             <img class="nav__phone-img" src="img/phone.png" alt="phone-img" width="10" height="11">
             +7 (927) 678-45-14</a>
           </li>
-          <li class="nav__item"><a class="nav__point nav__adress">
+          <li class="nav__item nav__item-desk"><a class="nav__point nav__adress">
             <img class="nav__adress-img" src="img/point-map.png" alt="on-the-map" width="9" height="13">
             г. Казань, Складская 20</a>
           </li>
         </ul>
       </nav>
-      <div class="header__burger">
+      <div class="header__burger burger-js">
         <span class="header__burger-span"></span>
         <span class="header__burger-span"></span>
         <span class="header__burger-span"></span>
       </div>
     </div>
-    <div class="header__slide slide">
+    <div class="header__slide slide slide-js">
       <div class="slide__article">
         <div class="slide__text">выгрузка вагонов, АРЕНДА ЗЕМЛИ, КРаНОВЫХ ПЛОЩАДОК, ответственное хранение</div>
         <button class="slide__btn button">ЗАКАЗАТЬ</button>
@@ -53,7 +53,7 @@
         </div>
       </div>  
     </div>
-    <div class="header__pages">
+    <div class="header__pages pages-js">
       <img class="header__vector" src="img/vector.png" alt="vector" width="24" height="8">
       1 / 3
       <img class="header__vector" src="img/vector.png" alt="vector" width="24" height="8">
@@ -67,6 +67,23 @@
   
   <!-- подключаем js -->
   <!-- <script src="js/main.js"></script> -->
+  <script>
+    const btnMenu = document.querySelector('.burger-js');
+    const navList = document.querySelector('.nav-js');
+    const menu = document.querySelector('.menu-js');
+    const slide = document.querySelector('.slide-js');
+    const header = document.querySelector('.header-js');
+    const pages = document.querySelector('.pages-js');
+    btnMenu.addEventListener('click', () => {
+      navList.classList.toggle('_active');
+      menu.classList.toggle('_active');
+      slide.classList.toggle('_active');
+      header.classList.toggle('_active');
+      pages.classList.toggle('_active');
+      btnMenu.classList.toggle('_active');
+    });
+
+  </script>
 </body>
 
 </html>
