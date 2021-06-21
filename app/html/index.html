@@ -8,24 +8,32 @@
 
 <body>
   <header class="header">
-    <nav class="header__nav nav">
-      <ul class="nav__menu">
-        <li class="nav__item"><a class="nav__point nav__logo">VELES</a></li>
-        <li class="nav__item"><a class="nav__point">ЗЕМЛЯ</a></li>
-        <li class="nav__item"><a class="nav__point">крановые площадки</a></li>
-        <li class="nav__item"><a class="nav__point">выгрузка вагонов</a></li>
-        <li class="nav__item"><a class="nav__point">фасовка</a></li>
-        <li class="nav__item"><a class="nav__point">щебень</a></li>
-        <li class="nav__item"><a class="nav__point nav__phone">
-          <img class="nav__phone-img" src="img/phone.png" alt="phone-img" width="10" height="11">
-          +7 (927) 678-45-14</a>
-        </li>
-        <li class="nav__item"><a class="nav__point nav__adress">
-          <img class="nav__adress-img" src="img/point-map.png" alt="on-the-map" width="9" height="13">
-          г. Казань, Складская 20</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header__top">
+      <div class="header__logo">VELES</div>
+      <nav class="header__nav nav">
+        <ul class="nav__menu">
+          <!-- <li class="nav__item"><a class="nav__point nav__logo">VELES</a></li> -->
+          <li class="nav__item"><a class="nav__point">ЗЕМЛЯ</a></li>
+          <li class="nav__item"><a class="nav__point">крановые площадки</a></li>
+          <li class="nav__item"><a class="nav__point">выгрузка вагонов</a></li>
+          <li class="nav__item"><a class="nav__point">фасовка</a></li>
+          <li class="nav__item"><a class="nav__point">щебень</a></li>
+          <li class="nav__item"><a class="nav__point nav__phone">
+            <img class="nav__phone-img" src="img/phone.png" alt="phone-img" width="10" height="11">
+            +7 (927) 678-45-14</a>
+          </li>
+          <li class="nav__item"><a class="nav__point nav__adress">
+            <img class="nav__adress-img" src="img/point-map.png" alt="on-the-map" width="9" height="13">
+            г. Казань, Складская 20</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__burger">
+        <span class="header__burger-span"></span>
+        <span class="header__burger-span"></span>
+        <span class="header__burger-span"></span>
+      </div>
+    </div>
     <div class="header__slide slide">
       <div class="slide__article">
         <div class="slide__text">выгрузка вагонов, АРЕНДА ЗЕМЛИ, КРаНОВЫХ ПЛОЩАДОК, ответственное хранение</div>
@@ -33,7 +41,10 @@
       </div>        
       <div class="slide__ground">
         <div class="slide__container">
-        <img class="slide__gr-img" src="../img/ground-img.png" alt="ground-img">
+          <picture class="slide__picture">
+            <source media="(max-width: 767.9px)" srcset="img/ground-img-mobile.png">
+            <img class="slide__gr-img" src="../img/ground-img.png" alt="ground-img">
+          </picture>        
         </div>
       </div>  
     </div>

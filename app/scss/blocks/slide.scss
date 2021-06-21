@@ -4,15 +4,28 @@
   text-transform: uppercase;
   // display: flex;
   // margin: 0 auto;
+
+  @include mobile {
+    @include font(18px, 31px, 700);
+  }
   
   &__article {
     padding-top: 140px;
     max-width: 50%;
+
+    @include mobile {
+      padding-top: 0;
+      max-width: 100%;
+    }
   }
 
   &__text {
     max-width: 526px;
     margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 36px;
+    }
   }
 
   &__btn {
@@ -21,6 +34,12 @@
     text-transform: uppercase;
     padding: 19px 53px;
     margin-bottom: 70px;
+
+    @include mobile {
+      @include font(14px, 16px, 700);
+      padding: 19px 40px;
+      margin-bottom: 0;
+    }
   }  
 
   &__ground {
@@ -29,6 +48,13 @@
     top: 170px;
     max-width: 50%;
     min-height: 100%;
+
+    @include mobile {
+      top: 0;
+      // min-height: 100%;
+      max-width: 100%;
+      z-index: -2;
+    }
   }
 
   &__container {
@@ -39,5 +65,9 @@
   &__gr-img {
     max-width: 100%;
     min-height: 100%;
+
+    // @include mobile {
+    //   opacity: 0.2;
+    // }
   }
 }
