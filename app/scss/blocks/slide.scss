@@ -2,9 +2,7 @@
   @include font(27px, 41px, 700);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  // display: flex;
-  // margin: 0 auto;
-
+ 
   @include mobile {
     @include font(18px, 31px, 700);
   }
@@ -45,29 +43,19 @@
   &__ground {
     position: absolute;
     right: 0;
-    top: 170px;
-    max-width: 50%;
-    min-height: 100%;
+    top: 175px;
+    width: 50%;
+    height: 510px;
+    object-fit: cover;
 
     @include mobile {
       top: 0;
-      // min-height: 100%;
-      max-width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
       z-index: -2;
     }
-  }
-
-  &__container {
-    max-width: 100%;
-    min-height: 100%;
-  }
-
-  &__gr-img {
-    max-width: 100%;
-    min-height: 100%;
-
-    // @include mobile {
-    //   opacity: 0.2;
-    // }
   }
 }
