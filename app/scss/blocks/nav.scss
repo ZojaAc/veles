@@ -15,18 +15,20 @@
   &__item {
     padding: 0;
     margin: 0;
-    margin-right: 30px;   
+    margin-right: 30px;
+    
+    @include desktop-mini {
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     @include mobile {
       margin-right: 0;
     }
   }
-
-  &__item-desk {
-    @include mobile {
-      display: none;
-    }
-  } 
  
   &__point {
     display: block;
@@ -36,33 +38,15 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
+    @include desktop-mini {
+      @include font(12px, 14px, 400);
+    }
+
     @include mobile {
       @include font(14px, 16px, 400);
       letter-spacing: 0.12em;
       padding-top: 20px;
       padding-bottom: 20px;
     }
-  }  
-  
-  &__phone {
-    text-transform: none;
-
-    .nav__phone-img {
-      transform: matrix(0.97, 0.26, -0.25, 0.97, 0, 0);
-    }
-  }
-
-  &__adress {
-    @include font(10px, 14px, 400);
-    text-transform: none;
-  }
-
-  &__phone, &__adress {
-    display: flex;
-    align-items: center;
-  }
-
-  &__phone-img, &__adress-img {
-    margin-right: 9px;
-  }  
+  }   
 }

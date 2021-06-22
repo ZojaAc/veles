@@ -4,6 +4,12 @@
   }
 }
 
+@mixin desktop-mini {
+  @media (max-width: $desktop-mini) {
+      @content;
+  }
+}
+
 @mixin mobile {
   @media (max-width: $mobile) {
       @content;
