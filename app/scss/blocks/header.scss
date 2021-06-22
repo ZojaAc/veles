@@ -5,7 +5,7 @@
   padding-bottom: 40px;
   position: relative;
 
-  @include mobile {
+  @include tablet {
     padding: 30px 16px 20px 16px;
     background: rgba(0, 0, 0, 0.2);
     
@@ -41,7 +41,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     
-    @include mobile {
+    @include tablet {
       z-index: 2;
       padding: 0;
     }
@@ -60,12 +60,7 @@
   }
 
   &__nav {
-    @include mobile {
-      display: none;
-    }
-
-    &._active {
-      display: block;
+    @include tablet {
       position: fixed;
       background-color: $bg-nav;
       top: 0;
@@ -76,16 +71,29 @@
       align-items: center;
       justify-content: center;
       overflow: auto;
+      display: none;
+    }
+
+    &._active {
+      display: flex;      
     }
   }  
 
   &__phone {
+    @include font(13px, 15px, 400);
+    letter-spacing: 0.1em;
     text-transform: none;
     margin-left: 15px;
     margin-right: 15px;
 
     .header__phone-img {
       transform: matrix(0.97, 0.26, -0.25, 0.97, 0, 0);
+    }
+
+    @media (max-width: 1080px) {
+      @include font(10px, 14px, 400);
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 
@@ -98,7 +106,7 @@
     display: flex;
     align-items: center;
 
-    @include mobile {
+    @include tablet {
       display: none;
     }
   }
@@ -120,7 +128,7 @@
 
     display: none;
 
-    @include mobile {
+    @include tablet {
       display: block;
     }
 
@@ -143,7 +151,7 @@
   }
 
   &__slide {
-    @include mobile {
+    @include tablet {
       display: block;
       padding: 0;
       margin-top: 102px;
@@ -159,7 +167,7 @@
     justify-content: flex-end;
     margin-right: 50%;
 
-    @include mobile {
+    @include tablet {
       margin-right: 0;
       padding-left: 0;
       padding-right: 0;
@@ -175,7 +183,7 @@
     display: flex;
     align-items: center;
    
-    @include mobile {
+    @include tablet {
       @include font(15px, 18px, 400);
     }
   }
@@ -185,7 +193,7 @@
     margin-left: 18px;
     margin-right: 18px;
 
-    @include mobile {
+    @include tablet {
       margin-left: 13px;
       margin-right: 13px;
     }
@@ -199,7 +207,7 @@
       transform: rotate(180deg);
     }
 
-    @include mobile {
+    @include tablet {
       width: 19px;
       height: 6px;
     }
