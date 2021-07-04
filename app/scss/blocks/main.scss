@@ -1,0 +1,12 @@
+.main {
+  background-color: $bg-cont;
+  padding-top: 200px;
+
+  &__title {
+    @include font(30px, 35px, 600);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 55px;
+  }
+
+}
