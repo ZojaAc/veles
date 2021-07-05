@@ -1,0 +1,43 @@
+.form {
+  min-height: 450px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__title {
+    @include font(25px, 29px, 700);
+    text-align: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: $bg-nav;
+    max-width: 730px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__cell {
+    background-color: $bg-form;
+    border: none;
+    padding: 18px 60px 18px 20px;
+    @include font(16px, 19px, 400);
+    color: rgba($bg-nav, 0.5);
+    margin-right: 15px;
+    width: 100%;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    padding: 18px 45px;
+    background-color: $bg-nav;
+    color: $font-nav;
+    @include font(12px, 14px, 600);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+}

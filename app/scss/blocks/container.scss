@@ -34,4 +34,25 @@
     padding: 30px;
   }
 
+  &__mark {
+    width: 51px;
+    height: 51px;
+    background-color: $bg-btn;
+    color: #000000;
+    @include font(20px, 21px, 600);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__number {
+    position: absolute;
+    left: 25%;
+    bottom: 50%;
+    @include font(80px, 94px, 600);
+    color: rgba(0, 0, 0, 0.03);
+  }
 }

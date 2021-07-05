@@ -1,0 +1,13 @@
+.map {
+  padding: 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  &__title {
+    @include font(30px, 35px, 600);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+}
