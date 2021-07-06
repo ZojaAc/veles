@@ -1,17 +1,63 @@
 .card {
   background-color: $font-nav;
   box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.102355);
+  position: relative;
+
+  &:hover {
+    transition: transform 500ms ease;
+    transform: translateY(-40px);
+  }
+
+  &:hover .card__text {
+    @include font(18px, 21px, 800);
+  }
   
   &__text {
     @include font(18px, 21px, 600);
     letter-spacing: 3px;
     text-transform: uppercase;
     color: $bg-nav;
-    text-align: center;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 115px;
+    display: flex;
+    align-items: center;
   }
   
   &__img {
     width: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    &:hover {
+      .card__icon-text {
+        opacity: 1;
+        transition: opacity 500ms ease, transform 500ms ease;
+      }
+    }
+  }
+
+  &__icon-img-block {
+    background-color: $bg-btn;
+    width: 57px;
+    height: 54px;
+    padding: 9px 10px;
+    cursor: pointer;
+  }
+
+  &__icon-text {
+    padding: 16px 15px 16px 4px;
+    @include font(18px, 21px, 400);
+    color: $bg-nav;
+    background-color: $bg-btn;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(0);
   }
 }

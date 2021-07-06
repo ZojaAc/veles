@@ -1,8 +1,8 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 70px;
-  max-width: 1170px;
+  padding-bottom: 48px;
+  max-width: 1200px;
   margin: 0 auto;
 
   &__row {
@@ -14,31 +14,9 @@
  
   &__column {
     width: calc(100%/3);
-    background-color: $font-nav;
-    padding: 15px 22px;
+    // background-color: $font-nav;
+    padding: 22px 15px;
     flex-grow: 1;
-    background-color: $bg-cont;
-  }
-
-  &__mark {
-    width: 51px;
-    height: 51px;
-    background-color: $bg-btn;
-    color: #000000;
-    @include font(20px, 21px, 600);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  &__number {
-    position: absolute;
-    left: 25%;
-    bottom: 50%;
-    @include font(80px, 94px, 600);
-    color: rgba(0, 0, 0, 0.03);
+    // background-color: $bg-cont;
   }
 }

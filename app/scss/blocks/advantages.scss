@@ -2,33 +2,49 @@
   background-color: $font-nav;
   padding-top: 85px;
 
-  &__title {
-    margin-bottom: 70px;
-  }
-
-  &__column {
-    display: flex;
-    min-height: auto;
-    max-height: 60px;
-    box-shadow: none;
-    position: relative;
-  }
-
-  &__row {
-    padding: 0 100px 85px 80px;
-    margin-bottom: 0;
-  }
-
-  &__text {
-    @include font(16px, 19px, 600);
-    letter-spacing: normal;
-    text-transform: none;
-    text-align: left;
-    padding: 0;
-    margin-left: 40px;
-  }
-
   &__container {
     padding-bottom: 30px;
+  }
+
+  &__card {
+    display: flex;
+    position: relative;
+    padding-left: 65px;
+    padding-bottom: 63px;
+  }
+
+  &__column &__card {
+    box-shadow: none;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+  }
+  
+  &__text {
+    @include font(16px, 19px, 600);   
+    margin-left: 40px;
+  }
+  
+  &__mark {
+    width: 51px;
+    height: 51px;
+    background-color: $bg-btn;
+    color: #000000;
+    @include font(20px, 21px, 600);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__number {
+    position: absolute;
+    left: 40%;
+    bottom: 80%;
+    @include font(80px, 94px, 600);
+    color: rgba(0, 0, 0, 0.03);
   }
 }
