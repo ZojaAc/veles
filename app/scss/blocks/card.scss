@@ -3,13 +3,17 @@
   box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.102355);
   position: relative;
 
+  transition: transform 500ms ease;
+  transform: translateY(0);
+
   &:hover {
     transition: transform 500ms ease;
     transform: translateY(-40px);
   }
-
+  
   &:hover .card__text {
-    @include font(18px, 21px, 800);
+    font-weight: 800;
+    transition: font-weight 200ms ease;
   }
   
   &__text {
@@ -32,14 +36,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-
-    &:hover {
-      .card__icon-text {
-        opacity: 1;
-        transition: opacity 500ms ease, transform 500ms ease;
-      }
-    }
+    display: flex;    
   }
 
   &__icon-img-block {
@@ -58,6 +55,13 @@
     display: flex;
     align-items: center;
     opacity: 0;
-    transform: translateY(0);
+    // transform: translateY(0);
+  }
+}
+
+.card__icon-img-block:hover {
+  .card__icon-text {
+    opacity: 1;
+    // transition: opacity 500ms ease, transform 500ms ease;
   }
 }

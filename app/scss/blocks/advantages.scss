@@ -3,30 +3,85 @@
   padding-top: 85px;
 
   &__container {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
 
-  &__card {
-    display: flex;
-    position: relative;
-    padding-left: 65px;
-    padding-bottom: 63px;
-  }
+  // &__card {
+  //   display: flex;
+  //   position: relative;
+  //   padding-left: 65px;
+  //   padding-bottom: 63px;
+  // }
 
-  &__column &__card {
-    box-shadow: none;
-  }
+  // &__column &__card {
+  //   box-shadow: none;
+  // }
 
   &__title {
     margin-bottom: 48px;
   }
   
-  &__text {
-    @include font(16px, 19px, 600);   
-    margin-left: 40px;
-  }
+  // &__text {
+  //   @include font(16px, 19px, 600);   
+  //   margin-left: 40px;
+  // }
   
-  &__mark {
+  // &__mark {
+  //   width: 51px;
+  //   height: 51px;
+  //   background-color: $bg-btn;
+  //   color: #000000;
+  //   @include font(20px, 21px, 600);
+  //   letter-spacing: 3px;
+  //   text-transform: uppercase;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   flex-shrink: 0;
+  // }
+
+  // &__number {
+  //   position: absolute;
+  //   left: 40%;
+  //   bottom: 80%;
+  //   @include font(80px, 94px, 600);
+  //   color: rgba(0, 0, 0, 0.03);
+  // }
+}
+
+.advantages__list {
+  counter-reset: list-1 list-2;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__point {
+  margin-bottom: 10px;
+  position: relative;
+  width: calc(100%/3);
+  display: flex;
+  align-items: center;
+  margin-bottom: 85px;
+
+  &::after {
+    content: counter(list-1);
+    counter-increment: list-1;
+    position: absolute;
+    left: 90px;
+    top: -50px;
+    @include font(80px, 94px, 600);
+    color: rgba(0, 0, 0, 0.03);
+  }
+
+  &::before {
+    content: '0' counter(list-2);
+    counter-increment: list-2;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 51px;
     height: 51px;
     background-color: $bg-btn;
@@ -34,17 +89,11 @@
     @include font(20px, 21px, 600);
     letter-spacing: 3px;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
   }
+}
 
-  &__number {
-    position: absolute;
-    left: 40%;
-    bottom: 80%;
-    @include font(80px, 94px, 600);
-    color: rgba(0, 0, 0, 0.03);
-  }
+.advantages__promo {
+  margin-left: 40px;
+  @include font(16px, 19px, 600);  
 }
