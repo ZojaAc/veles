@@ -2,8 +2,16 @@
   background-color: $font-nav;
   padding-top: 85px;
 
+  @include tablet {
+    padding-top: 10px;
+  }
+
   &__container {
     padding-bottom: 40px;
+
+    @include tablet {
+      padding-bottom: 5px;
+    }
   }
 
   // &__card {
@@ -19,6 +27,10 @@
 
   &__title {
     margin-bottom: 48px;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
   }
   
   // &__text {
@@ -54,15 +66,22 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .advantages__point {
   margin-bottom: 10px;
   position: relative;
-  width: calc(100%/3);
+  width: 33.33%;
   display: flex;
   align-items: center;
   margin-bottom: 85px;
+
+  @include tablet {
+    width: 100%;
+    margin-bottom: 35px;
+  }
 
   &::after {
     content: counter(list-1);
@@ -72,6 +91,10 @@
     top: -50px;
     @include font(80px, 94px, 600);
     color: rgba(0, 0, 0, 0.03);
+    
+    @include tablet {
+      display: none;
+    }
   }
 
   &::before {
@@ -96,4 +119,5 @@
 .advantages__promo {
   margin-left: 40px;
   @include font(16px, 19px, 600);  
+  max-width: 190px;
 }

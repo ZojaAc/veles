@@ -4,10 +4,29 @@
   margin: 0 auto;
   margin-bottom: 100px;
 
+  @include tablet {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    margin-bottom: 15px;
+  }
+
   &__title {
     @include font(30px, 35px, 600);
     text-align: center;
     padding: 15px;
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 10px;
+      @include font(20px, 24px, 600);
+      color: $bg-nav;
+    }
+  }
+
+  &__img {
+    @include tablet {
+      width: 100vw;
+    }    
   }
 }

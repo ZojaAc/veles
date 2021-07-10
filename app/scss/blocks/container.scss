@@ -5,6 +5,10 @@
   max-width: 1200px;
   margin: 0 auto;
 
+  @include tablet {
+    padding-bottom: 18px;
+  }
+
   &__row {
     display: flex;
     flex-wrap: wrap;
@@ -18,5 +22,10 @@
     padding: 22px 15px;
     flex-grow: 1;
     // background-color: $bg-cont;
+
+    @include tablet {
+      width: 100%;
+  padding: 18px 16px;
+    }
   }
 }

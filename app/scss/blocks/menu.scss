@@ -1,4 +1,4 @@
-.header {
+.menu {
   background-color: $bg-nav;
   color: $font-nav;
   font-family: $font-family;
@@ -6,19 +6,8 @@
   position: relative;
 
   @include tablet {
-    padding: 30px 16px 20px 16px;
-    background: rgba(0, 0, 0, 0.4);
-    
-    // &::after {
-    //   background: rgba(0, 0, 0, 0.2);
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   z-index: 1;
-    // }
+    padding: 30px 16px 22px 16px;
+    background: rgba(0, 0, 0, 0.6);
   }
 
   &._active {
@@ -55,7 +44,7 @@
     border: 1px solid $font-nav;
     padding: 10px 19px;
     max-width: 90px;
-    margin-right: 15px;
+    // margin-right: 15px;
     z-index: 2;
   }
 
@@ -86,7 +75,7 @@
     margin-left: 15px;
     margin-right: 15px;
 
-    .header__phone-img {
+    .menu__phone-img {
       transform: matrix(0.97, 0.26, -0.25, 0.97, 0, 0);
     }
 
@@ -133,18 +122,18 @@
     }
 
     &._active {
-      .header__burger-span:nth-child(1) {
+      .menu__burger-span:nth-child(1) {
         transform: rotate(45deg);
         margin-bottom: 0;
       }
 
-      .header__burger-span:nth-child(2) {
+      .menu__burger-span:nth-child(2) {
         transform: rotate(-45deg);
         margin-bottom: 0;
         margin-top: -2px;
       }
 
-      .header__burger-span:nth-child(3) {
+      .menu__burger-span:nth-child(3) {
         display: none;
       } 
     }
@@ -165,12 +154,14 @@
 
   &__pages-row {
     justify-content: flex-end;
-    margin-right: 50%;
+    width: calc(50% - 30px);
+    margin: 0;
+    padding-right: 0;
 
     @include tablet {
       margin-right: 0;
       padding-left: 0;
-      padding-right: 0;
+      width: 100%;
     }
     
     &._active {

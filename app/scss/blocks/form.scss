@@ -6,6 +6,10 @@
   justify-content: center;
   flex-direction: column;
 
+  @include tablet {
+    padding: 60px 16px;
+  }
+
   &__title {
     @include font(25px, 29px, 700);
     text-align: center;
@@ -15,21 +19,54 @@
     max-width: 730px;
     margin: 0 auto;
     margin-bottom: 30px;
+
+    @include tablet {
+      @include font(18px, 21px, 700);
+      letter-spacing: 0.12em;      
+      margin-bottom: 20px;
+    }
   }
 
   &__cell {
     background-color: $bg-form;
     border: none;
-    padding: 18px 60px 18px 20px;
+    padding: 18px 20px 18px 20px;
     @include font(16px, 19px, 400);
-    color: rgba($bg-nav, 0.5);
+    color: $bg-nav;
     margin-right: 15px;
     width: 100%;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__cell::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba($bg-nav, 0.5);
+  }
+
+  &__cell::-moz-placeholder { /* Firefox 19+ */
+    color: rgba($bg-nav, 0.5);
+    opacity: 1;
+  }
+
+  &__cell:-ms-input-placeholder { /* IE 10+ */
+    color: rgba($bg-nav, 0.5);
+  }
+
+  &__cell:-moz-placeholder { /* Firefox 18- */
+    color: rgba($bg-nav, 0.5);
+    opacity: 1;
   }
 
   &__action {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__button {
@@ -39,5 +76,9 @@
     @include font(12px, 14px, 600);
     letter-spacing: 0.07em;
     text-transform: uppercase;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 }

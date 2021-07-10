@@ -32,11 +32,14 @@
  
   &__point {
     display: block;
+    text-decoration: none;
     @include font(13px, 15px, 400);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: $font-nav;
+    cursor: pointer;
 
     @include tablet {
       @include font(14px, 16px, 400);

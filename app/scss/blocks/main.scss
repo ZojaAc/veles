@@ -2,10 +2,22 @@
   background-color: $bg-cont;
   padding-top: 200px;
 
+  @include tablet {
+    padding-top: 45px;
+    background-color: $font-nav;
+  }
+
   &__title {
     @include font(30px, 35px, 600);
     text-align: center;
     padding: 15px;
     margin-bottom: 12px;
+
+    @include tablet {
+      @include font(20px, 24px, 600);
+      color: $bg-nav;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }

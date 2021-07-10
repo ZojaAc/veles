@@ -9,11 +9,11 @@
   
   &__article {
     padding-top: 140px;
-    max-width: 50%;
+    width: calc(50% - 40px);
 
     @include tablet {
       padding-top: 0;
-      max-width: 100%;
+      width: 100%;
     }
   }
 
