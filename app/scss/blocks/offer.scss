@@ -46,6 +46,7 @@
     @include tablet {
       padding-left: 16px;
       padding-right: 16px;
+      flex-grow: 1;
     }
   }
 
@@ -82,7 +83,6 @@
     &--dark {
       color: $font-nav;
     }
-
   }
 
   &__text {
@@ -110,6 +110,10 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     max-width: 277px;
+
+    @include tablet {
+      margin: 0 auto;
+    }
     
     &--dark {
       border: 1px solid $font-nav;
@@ -121,7 +125,9 @@
 
     @include tablet {
       box-shadow: none;
-      max-width: 100%;
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
     }
   }
 
@@ -136,10 +142,12 @@
     @include tablet {
       bottom: auto;
       top: -40px;
-      right: auto;
-      left: auto;
+      right: 16px;
+      left: 16px;
       width: 90%;
       height: 250px;
+      // object-fit: cover;
+      margin: 0 auto;
     }
   }
 }

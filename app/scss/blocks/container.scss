@@ -24,8 +24,14 @@
     // background-color: $bg-cont;
 
     @include tablet {
+      width: 50%;
+      padding: 18px 16px;
+      flex-grow: 0;
+    }
+
+    @include mobile {
       width: 100%;
-  padding: 18px 16px;
+      padding: 18px 16px;
     }
   }
 }
